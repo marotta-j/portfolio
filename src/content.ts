@@ -10,12 +10,11 @@ import unifi from "@/assets/unifi-ss.png";
 
 export const REPO_URL = "https://github.com/marotta-j/portfolio";
 
-// TODO: react router
 export const sections = [
-  { id: "index", label: "index" },
-  { id: "projects", label: "projects" },
-  { id: "writing", label: "writing" },
-];
+  { label: "index", to: "/", hash: "index" },
+  { label: "projects", to: "/", hash: "projects" },
+  { label: "writing", to: "/writing" },
+] as const;
 
 const EMAIL = atob("bWFyb3R0YWpAYnUuZWR1");
 
@@ -73,5 +72,9 @@ export const projects: Project[] = [
 ];
 
 export const posts = [
-  { title: "Placeholder for now", date: "2026-07-14", href: "#" },
-];
+  {
+    title: "Why learning to code matters in the AI era",
+    date: "08-26-2026",
+    to: "/writing/why-code-matters",
+  },
+] as const;

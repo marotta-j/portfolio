@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { posts } from "@/content";
 
 /**
@@ -8,18 +9,18 @@ export function Blog() {
     <ul className="divide-y divide-border">
       {posts.map((post) => (
         <li key={post.title}>
-          <a
-            href={post.href}
+          <Link
+            to={post.to}
             className="flex items-baseline justify-between gap-4 py-3 transition-colors hover:text-fg"
           >
             <span className="font-serif">{post.title}</span>
             <time
               dateTime={post.date}
-              className="shrink-0 font-mono text-xs text-muted/60"
+              className="shrink-0 font-sans text-xs text-muted/60"
             >
               {post.date}
             </time>
-          </a>
+          </Link>
         </li>
       ))}
     </ul>
