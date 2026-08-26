@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@import "@fontsource-variable/playfair-display";
+@import "@fontsource-variable/manrope/wght.css";
+@import "@fontsource-variable/lora/wght.css";
+
+@theme {
+  --color-bg: #0a0a0b;
+  --color-surface: #101013;
+  --color-border: #1f1f24;
+  --color-muted: #8b8b95;
+  --color-fg: #ededf0;
+  --color-accent: #2255d7;
+
+  --font-sans: "Manrope Variable", system-ui, sans-serif;
+  --font-serif: "Lora Variable", ui-serif, Georgia, serif;
+  --font-mono: ui-monospace, "SF Mono", Consolas, monospace;
+}
+
+:root {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Turn the contour texture up or down here. */
+  --contour-opacity: 0.02;
+}
+
+html {
+  background: var(--color-bg);
+}
+
+body {
+  color: var(--color-muted);
+  font-family: var(--font-sans);
+}
+
+/*
+ * Topographic map background
+ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("./assets/contour-lines.png") center / cover no-repeat;
+  filter: invert(1);
+  opacity: var(--contour-opacity);
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-accent) 30%, transparent);
+  color: var(--color-fg);
+}
+
+/* Thin, muted scrollbar for the horizontal project rail. */
+.hscroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+
+/* Offset anchor jumps so headings clear the sticky nav. */
+:target {
+  scroll-margin-top: 5rem;
+}
