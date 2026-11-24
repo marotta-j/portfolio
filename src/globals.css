@@ -46,7 +46,7 @@ body::before {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background: url("./assets/contour-lines.png") center / cover no-repeat;
+  background: url("./assets/contour-lines.webp") center / cover no-repeat;
   filter: invert(1);
   opacity: var(--contour-opacity);
 }

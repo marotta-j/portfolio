@@ -3,10 +3,12 @@ import {
   GitHubLogoIcon,
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
-import headshot from "@/assets/headshot.png";
-import mc from "@/assets/mc.png";
-import easypoll from "@/assets/easypoll.png";
-import unifi from "@/assets/unifi-ss.png";
+import headshot from "@/assets/headshot.webp";
+import mc from "@/assets/mc.webp";
+import easypoll from "@/assets/easypoll.webp";
+import unifi from "@/assets/unifi-ss.webp";
+import finch from "@/assets/finch.webp";
+import smata from "@/assets/smata.webp";
 
 export const REPO_URL = "https://github.com/marotta-j/portfolio";
 
@@ -42,9 +44,27 @@ export type Project = {
   image?: string;
   site?: string;
   github?: string;
+  download?: string;
 };
 
 export const projects: Project[] = [
+  {
+    name: "Finch: Sparse Tensor Algebra in Python",
+    description:
+      "Open-source contributions to bring Finch's high-performance sparse tensor compiler to Python, working with professors at Boston University and Georgia Tech.",
+    tags: ["Research", "Python", "Compilers", "Sparse Tensors"],
+    image: finch,
+    github: "https://github.com/finch-tensor/finch-tensor/"
+  },
+  {
+    name: "Smata: Study Smarter",
+    description:
+      "Founded and built Smata, a social study platform used by 1,500+ students at 50+ universities. Students have logged over 15,000 hours of focused study time.",
+    tags: ["FastAPI", "React Native", "PostgreSQL", "Redis"],
+    image: smata,
+    site: "https://smata.study/",
+    download: "https://apps.apple.com/us/app/smata-study-smarter/id6775473971"
+  },
   {
     name: "MissedConnections",
     description:

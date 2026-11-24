@@ -24,7 +24,7 @@ export function Footer() {
             setBurst((n) => n + 1);
             setCelebrating(true);
           }}
-          className="justify-self-center rounded-full border border-border px-3 py-1 transition-colors hover:border-accent/40 hover:text-accent"
+          className="justify-self-center cursor-pointer rounded-full border border-border px-3 py-1 transition-colors hover:border-accent/40 hover:text-accent"
         >
           click me
         </button>

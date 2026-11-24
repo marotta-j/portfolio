@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Figure, Post } from "@/components/Post";
 import { posts } from "@/content";
-import quote from "@/assets/why-code-matters/quote.png";
+import quote from "@/assets/why-code-matters/quote.webp";
 
 export const Route = createFileRoute("/writing/why-code-matters")({
   component: HelloWorld,

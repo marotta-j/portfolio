@@ -29,7 +29,7 @@ function ProjectCard({ project }: { project: Project }) {
           <p className="mt-0.5 font-serif text-xs text-muted/60">
             {project.tags.join(" · ")}
           </p>
-          <p className="mt-2 line-clamp-3 text-sm leading-relaxed">
+          <p className="mt-2 line-clamp-5 text-sm leading-relaxed">
             {project.description}
           </p>
 
@@ -52,6 +52,16 @@ function ProjectCard({ project }: { project: Project }) {
                 className="transition-colors hover:text-accent"
               >
                 github ↗
+              </a>
+            )}
+            {project.download && (
+              <a
+                href={project.download}
+                target="_blank"
+                rel="noreferrer"
+                className="transition-colors hover:text-accent"
+              >
+                download ↗
               </a>
             )}
           </div>
